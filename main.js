@@ -6,7 +6,7 @@ const DAYS_OF_THE_WEEK = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
 let selectedCityText;
 let selectedCity;
 const getCitiesUsingGeolocation = async (searchText) => {
-    const respnse = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${searchText}&limit=5&appid=${API_KEY}`);
+    const respnse = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${searchText}&limit=5&appid=${API_KEY}`);
     return respnse.json();
 }
 
@@ -27,7 +27,7 @@ const getHourlyForecast = async ({ name: city }) => {
 }
 
 const formatTemperature = (temp) => `${temp?.toFixed(1)}°`;
-const createIconUrl = (icon) => `http://openweathermap.org/img/wn/${icon}@2x.png`
+const createIconUrl = (icon) => `https://openweathermap.org/img/wn/${icon}@2x.png`
 
 const loadCurrentForecast = ({ name, main: { temp, temp_max, temp_min }, weather: [{ description }] }) => {
     const currentForecastElement = document.querySelector("#current-forecast");
