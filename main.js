@@ -121,7 +121,7 @@ const loadForecastUsingGeoLocation = () => {
         loadData();
     }, error => console.log(error))
 }
-
+// loading data
 const loadData = async () => {
     const currentWeather = await getCurrentWeatherData(selectedCity);
     loadCurrentForecast(currentWeather)
