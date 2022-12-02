@@ -39,7 +39,7 @@ body {
   max-width: 800px;
   margin: var(--spacing-regular) auto;
   /* background: url("https://source.unsplash.com/?weather"); */
-  background-image: linear-gradient(180deg, rgb(234, 28, 28), rgb(81, 81, 214));
+background-image: linear-gradient(-20deg, #00cdac 0%, #8ddad5 100%);
   background-repeat: no-repeat;
   background-size: cover;
 }
